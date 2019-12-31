@@ -312,6 +312,11 @@ li {
 @media screen and (max-width: 767px) {
   .footer {
     flex-direction: column;
+    width: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 0 !important;
   }
 }
 .footer-logo {
@@ -376,6 +381,11 @@ li {
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 767px) {
+  .services .service {
+    margin-bottom: 0;
+  }
+}
 .services .service .container1 {
   width: 280px;
   height: 300px;
@@ -383,7 +393,6 @@ li {
   position: relative;
   overflow: hidden !important;
   margin-bottom: 20px;
-  border-radius: 10px;
 }
 .services .service .container1::after {
   content: "";
@@ -420,7 +429,13 @@ li {
   width: 100%;
   height: 100%;
 }
-
+.shopss h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #07549f;
+}
 .shops {
   background-color: #fff;
   display: flex;
@@ -431,20 +446,26 @@ li {
   margin: 0 auto;
 }
 .shops .shop {
-  background: #fafafa;
+  /* background: #fafafa; */
   width: 181px;
   height: 220px;
   /* margin-right: 10px; */
   margin-bottom: 30px;
   /* margin-top: 30px; */
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08); */
   text-align: center;
   transition: all 0.3s ease-in-out;
   border-width: 3px;
   height: auto;
   position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
-.shops .shop::before {
+@media screen and (max-width: 767px) {
+  .shops .shop {
+    width: 150px;
+  }
+}
+/* .shops .shop::before {
   content: " ";
   position: absolute;
   bottom: 0px;
@@ -468,16 +489,27 @@ li {
   to {
     width: 100%;
   }
-}
+} */
 .shops .shop .details {
   margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-/* .shops .shop:hover {
-    background: #333;
-} */
+.shops .shop .details span {
+  opacity: 0.8;
+  margin-top: 10px;
+}
 .shops .shop .details h4 {
   font-size: 16px;
   margin: 15px 0;
+}
+@media screen and (max-width: 767px) {
+  .shops .shop .details h4 {
+    font-size: 14px;
+    padding: 0 3px;
+  }
 }
 .shops .shop .details img {
   width: 80px;
@@ -501,8 +533,28 @@ li {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+@media screen and (max-width: 767px) {
+  .shops .shop .details button {
+    padding: 12px 20px;
+  }
+}
 .shops .shop .details button:hover {
   opacity: 0.8;
+}
+.indv {
+  margin: 0 0 20px;
+}
+.indv img {
+  width: 100%;
+  height: 335px;
+  object-fit: fill;
+}
+@media screen and (max-width: 767px) {
+  .indv img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
 }
 .efficient,
 .commer {
@@ -572,4 +624,17 @@ li {
 }
 .commer .shops .shop {
   width: 250px;
+}
+@media screen and (max-width: 767px) {
+  .commer .shops .shop {
+    width: 150px;
+  }
+}
+
+.infos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
