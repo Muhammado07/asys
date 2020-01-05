@@ -736,10 +736,13 @@ li {
   display: none;
 }
 @media screen and (max-width: 767px) {
+  .keys {
+    overflow: hidden;
+  }
   .key-project .key-details {
     display: flex;
     overflow-x: auto;
-    height: 250px;
+    height: 230px;
     -webkit-overflow-scrolling: touch;
     overflow-y: hidden;
     justify-content: normal !important;
@@ -750,6 +753,7 @@ li {
   .key-project .key-details::-webkit-scrollbar {
     --webkit-scrollbar: none;
   }
+
   .key-project .key-details .key-img {
     flex-shrink: 0;
     scroll-snap-align: start;
@@ -763,7 +767,6 @@ li {
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
-    margin-bottom: 10px;
   }
   .key a {
     text-decoration: none;
